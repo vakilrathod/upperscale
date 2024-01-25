@@ -1,0 +1,249 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-SemiBold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/poppins/Poppins-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply select-none;
+    font-family: "Poppins", sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply rounded-full bg-base-300/80;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-base-content/20;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply rounded-full bg-base-content/50;
+  }
+}
+
+@layer utilities {
+  .animate {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  /* .bg-gradient-purple {
+    @apply bg-gradient-to-br from-[#7741ff] to-[#af55ff] hover:from-[#af55ff] hover:to-[#7741ff];
+  }
+  .bg-gradient-red {
+    @apply bg-gradient-to-br from-rose-600 to-red-400 hover:from-red-400 hover:to-rose-600;
+  }
+  .bg-gradient-white {
+    @apply to-neutral-100 hover:from-neutral-100 bg-gradient-to-br from-slate-400 hover:to-slate-400;
+  }
+  .bg-gradient-upscayl {
+    @apply bg-gradient-to-br from-[#7741ff] to-[#af55ff] hover:from-[#af55ff] hover:to-[#7741ff];
+  }
+  .bg-gradient {
+    @apply bg-gradient-to-br from-green-500 to-lime-300 hover:from-lime-300 hover:to-green-500;
+  }
+  .bg-gradient-blue {
+    @apply bg-gradient-to-br from-blue-500 to-sky-400 hover:from-sky-400 hover:to-blue-500;
+  } */
+  .step-heading {
+    @apply mb-2 font-semibold;
+  }
+
+  .react-select-container {
+    @apply w-40;
+  }
+  .full-width {
+    @apply w-full;
+  }
+  .react-select-container .react-select__control {
+    @apply rounded-btn h-12 cursor-pointer !border-0 !border-none !border-transparent bg-primary shadow-none;
+  }
+
+  .react-select-container .react-select__control--menu-is-open {
+    @apply bg-primary-focus text-primary-content;
+  }
+
+  .react-select-container .react-select__single-value {
+    @apply text-sm font-semibold uppercase text-primary-content;
+  }
+
+  .react-select-container .react-select__input-container {
+    @apply text-sm font-semibold uppercase text-primary-content;
+  }
+
+  .react-select-container .react-select__menu {
+    @apply rounded-lg bg-primary p-1 text-sm font-semibold uppercase;
+  }
+
+  .react-select-container .react-select__option {
+    @apply my-1 cursor-pointer break-all rounded-md bg-primary text-primary-content hover:bg-primary-focus hover:text-primary-content;
+  }
+
+  .react-select-container .react-select__option--is-selected {
+    @apply bg-accent text-accent-content;
+  }
+
+  .outline-title {
+    text-shadow:
+      0px 0px 10px rgba(255, 255, 255, 0.5),
+      0px 0px 10px rgba(255, 255, 255, 1);
+  }
+  .outline-title-none {
+    text-shadow: none;
+  }
+}
+
+.zoom-100 {
+  transform: scale(1);
+}
+.zoom-125 {
+  transform: scale(1.25);
+}
+.zoom-150 {
+  transform: scale(1.5);
+}
+.zoom-175 {
+  transform: scale(1.75);
+}
+.zoom-200 {
+  transform: scale(2);
+}
+
+.animate-step-in {
+  animation: animate-step-in 0.6s cubic-bezier(0.07, 0.43, 0.02, 1);
+}
+
+[data-theme="upscayl"] .btn {
+  @apply font-medium normal-case !min-h-min h-10 py-2 px-3;
+}
+
+[data-theme="upscayl"] input[type="range"] {
+  @apply rounded-full;
+}
+
+[data-theme="upscayl"] .react-select-container .react-select__control {
+  @apply rounded-btn h-10 cursor-pointer !border-0 !border-none !border-transparent bg-primary shadow-none;
+}
+
+[data-theme="upscayl"] .react-select-container .react-select__single-value {
+  @apply text-primary-content normal-case font-medium;
+}
+
+[data-theme="upscayl"] .react-select-container .react-select__input-container {
+  @apply text-xs text-primary-content normal-case font-medium;
+}
+
+[data-theme="upscayl"] .react-select-container .react-select__menu {
+  @apply rounded-lg bg-primary p-1 normal-case font-medium;
+}
+
+.mac-titlebar {
+  -webkit-app-region: drag;
+}
+
+.checkerboard {
+  background-color: rgba(255, 255, 255);
+  background-image: linear-gradient(
+      45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    ),
+    linear-gradient(
+      -45deg,
+      #000 25%,
+      transparent 25%,
+      transparent 75%,
+      #000 75%,
+      #000
+    );
+  background-size: 40px 40px;
+  background-repeat: repeat;
+}
+
+.spinner {
+  -webkit-animation: sk-rotateplane 2.2s infinite ease-in-out;
+  animation: sk-rotateplane 2.2s infinite ease-in-out;
+}
+
+@keyframes animate-step-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(360deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(360deg) rotateX(360deg);
+  }
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-360.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-360.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-360deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-360deg) rotateY(-359.9deg);
+  }
+}
